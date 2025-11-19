@@ -2,23 +2,13 @@
 
 A comprehensive, low-latency implementation of the classic Duck Hunt game, leveraging WebAssembly (WASM) for native performance, and augmented reality (AR) for a truly immersive, physical gaming experience via Google Cardboard.
 
-This project showcases the integration of C++ graphics engines with modern browser sensor APIs and AR frameworks.
-
 ## 🚀 Key Technologies
 
 | Technology | Role |
 | :--- | :--- |
-| **C++ & Emscripten** | Core game logic, physics, and graphics rendering (via the `Ungine` engine). |
+| **raylib** | The Core Graphics Engine. Handles all 2D/3D rendering and texture loading. |
 | **WebAssembly (WASM)** | Provides native-level performance crucial for smooth 60 FPS VR/AR rendering. |
 | **ARToolKit** | Handles real-time detection and tracking of the AR marker, anchoring the ducks in the real world. |
-| **AbsoluteOrientationSensor** | Uses the Android device's gyroscope to provide precise, low-latency aim control. |
-| **Google Cardboard** | Provides the stereoscopic view necessary for the VR/AR experience. |
-| **raylib** | The Core Graphics Engine. Handles all 2D/3D rendering and texture loading. |
-
-## ✨ Features
-
-* **Physical Aiming:** Control the crosshair by physically turning your head (using the phone's gyroscope).
-* **Browser-Based:** Runs entirely within a web browser, making deployment simple and cross-platform (though optimized for Android devices).
 
 ## 🛠️ Build and Setup
 
@@ -29,3 +19,4 @@ This project showcases the integration of C++ graphics engines with modern brows
     * [Link to AR Marker PDF](https://github.com/PocketVR/Duck_Hunt_VR/blob/main/view/assets/markers.pdf)
 
 ## Showcase
+[![IMAGE](https://github.com/user-attachments/assets/40fa7e68-040c-4e78-a1be-e7505b00e08c)](https://pocketvr.github.io/Duck_Hunt_Vr_Game/)
