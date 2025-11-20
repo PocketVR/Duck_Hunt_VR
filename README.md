@@ -2,16 +2,6 @@
 
 A comprehensive, low-latency implementation of the classic Duck Hunt game, leveraging WebAssembly (WASM) for native performance, and augmented reality (AR) for a truly immersive, physical gaming experience via Google Cardboard.
 
-## 🚀 Key Technologies
-
-| Technology | Role |
-| :--- | :--- |
-| **raylib** | The Core Graphics Engine. Handles all 2D/3D rendering and texture loading. |
-| **WebAssembly (WASM)** | Provides native-level performance crucial for smooth 60 FPS VR/AR rendering. |
-| **ARToolKit** | Handles real-time detection and tracking of the AR marker, anchoring the ducks in the real world. |
-
-## 🛠️ Build and Setup
-
 ### Prerequisites
 
 1.  **Emscripten SDK:** Must be installed and configured.
