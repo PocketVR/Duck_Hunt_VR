@@ -34,8 +34,8 @@ namespace ungine { namespace script {
 
         }) );
 
-    //  self->on3DDraw([=](){ rl::DrawCube( *trg, 3, 3, 3, rl::WHITE ); });
-        self->onLoop  ([=]( float delta ){
+    //  self->on3D  ([=](){ rl::DrawCube( *trg, 3, 3, 3, rl::WHITE ); });
+        self->onLoop([=]( float delta ){
             
             auto distance = math::distance( pos->translate.position, *trg );
             

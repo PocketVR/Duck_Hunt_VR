@@ -14,10 +14,10 @@ namespace ungine { namespace script {
 
         ptr_t<bool> collided = new bool( false );
 
-        self->on3DDraw([=](){ mdl.draw( *pos, rl::WHITE ); });
-        self->onLoop  ([=]( float ){ snd.next(); });
+        self->on3D  ([=](){ mdl.draw( *pos, rl::WHITE ); });
+        self->onLoop([=]( float ){ snd.next(); });
 
-        self->onLoop  ([=]( float delta ){
+        self->onLoop([=]( float delta ){
             pos->rotation = math::move_toward( pos->rotation, vec3_t({ 0, 0, 0 }), delta * 2.f );
             if( pos->rotation.x < EPSILON && !snd.is_playing() ){
             if( *collided ){ pos->rotation.x = PI/4; *collided =false; }}

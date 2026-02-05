@@ -1,11 +1,12 @@
 window.addEventListener( "load", ()=>{
 
-document.querySelector("[start-game]").addEventListener( "click", ()=>{
-document.querySelector("[start-game]").style["display"] = "none";
-document.querySelector("canvas")      .hidden = false;
+    var Module = {
+        preRun: [], postRun: [],
+        canvas: document.getElementById('canvas')
+    };
 
-    Engine().then(( ev )=>{ 
-        
+    Engine( Module ).then(( ev )=>{ 
+
         ev.canvas     = document.querySelector("canvas");
         window.engine = ev;
 
@@ -13,7 +14,5 @@ document.querySelector("canvas")      .hidden = false;
         console.log( err );
         alert( "error while launching the game" );
     });
-
-});
 
 });

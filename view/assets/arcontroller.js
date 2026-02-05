@@ -29,7 +29,7 @@ function start_ar_controller( callback ) {
 
         navigator.mediaDevices.getUserMedia({video:hint}).then((stream)=>{
             video.srcObject  = stream; video.play();
-            var arController = new ARController( video, "/assets/camera_para.dat" );
+            var arController = new ARController( video, "./assets/camera_para.dat" );
                 arController.onload = ()=>{ ar_setup( arController, video, callback ); }
         }).catch((err)=>{
             console.log( err );

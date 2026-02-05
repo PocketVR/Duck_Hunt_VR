@@ -24,8 +24,8 @@ namespace ungine { namespace scene { node_t scene_0() {
 
     //  self->append_child( node::node_fly_camera_3D( nullptr ) );
 
-        self->on2DDraw([=](){ rl::DrawFPS ( 30, 30  ); });
-    //  self->on3DDraw([=](){ rl::DrawGrid( 10, 100 ); });
+        self->on2D([=](){ rl::DrawFPS ( 30, 30  ); });
+    //  self->on3D([=](){ rl::DrawGrid( 10, 100 ); });
 
         self->onLoop([=]( float ){ snd.next(); });
 

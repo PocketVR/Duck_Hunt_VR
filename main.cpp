@@ -6,8 +6,8 @@
 
 using namespace nodepp;
 
-#include "../controller/script/utils.cpp"
-#include "../controller/scene/scene_0.cpp"
+#include "./controller/script/utils.cpp"
+#include "./controller/scene/scene_0.cpp"
 
 void onMain() {
 
@@ -16,11 +16,16 @@ void onMain() {
 
     EM_ASM({ (()=>{
 
+        if( screen.orientation ){
+            screen.orientation.addEventListener("change",()=>{ engine.refresh(); });
+        } else {
+            window.addEventListener( "resize", ()=>{ engine.refresh(); });
+        }
+
         document.querySelector( "button" ).addEventListener( "click",()=>{
             window.document.querySelector("canvas").requestFullscreen();
         });
 
-        window.addEventListener( "resize", ()=>{ engine.refresh(); });
         window.sensor = new Object({ x:"0", y:"0", z:"0", w:"0" });
 
     try {
