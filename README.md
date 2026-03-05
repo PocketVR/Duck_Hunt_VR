@@ -2,6 +2,9 @@
 
 A comprehensive, low-latency implementation of the classic Duck Hunt game, leveraging WebAssembly (WASM) for native performance, and augmented reality (AR) for a truly immersive, physical gaming experience via Google Cardboard.
 
+### Showcase
+https://github.com/user-attachments/assets/aa5a6444-db6a-4030-b6bc-0a46a5440e8a
+
 ### Prerequisites
 
 1.  **Emscripten SDK:** Must be installed and configured.
